@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="5" type="collection">
+        <element label="New field" max_length="40" name="new_field" reference="x_58872_needit_1" type="integer"/>
+        <element label="New field 1" max_length="40" name="new_field_1" read_only="true" type="integer"/>
+        <element label="New File Attachment" max_length="40" name="u_file_attachment_2" type="file_attachment"/>
+        <element label="Customer contact" max_length="40" name="u_integer_1" type="integer"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="ht"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Your Departmen Choice" sequence="3" value="your_choice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="What Needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="HR 1" sequence="0" value="hr_1"/>
+                <element inactive_on_update="false" label="HR 2" sequence="1" value="hr_2"/>
+                <element inactive_on_update="false" label="Legal 1" sequence="2" value="legal_1"/>
+                <element inactive_on_update="false" label="Legal 2" sequence="3" value="legal_2"/>
+                <element inactive_on_update="false" label="Facilities 1" sequence="4" value="facilities_1"/>
+                <element inactive_on_update="false" label="Facilities 2" sequence="5" value="facilities_2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
